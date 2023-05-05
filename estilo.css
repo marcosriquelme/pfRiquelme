@@ -43,7 +43,7 @@ body {
 .contenedor {
     display: flex !important;
     text-align: center;
-    background-color: aqua;
+    background-color: aqua !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px;
     height: 250px;
@@ -433,7 +433,7 @@ footer p{
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1500) {
+@media only screen and (min-width: 768px) and (max-width: 1067) {
     .galeria {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 100px 100px;
