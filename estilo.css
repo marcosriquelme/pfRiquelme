@@ -11,18 +11,21 @@ html {
 
 body {
     display: flex;
-    background-image: url(imagen/logistics-3125136_1920.jpg);
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
+    
     flex-wrap: wrap;
-    background-color: beige;
+    background-color: orangered;
     background-size: cover;
     background-position: center;
 
 }
 
 .navbar {
-    background-color: aquamarine;
+    background-color: orangered;
+}
+.navbar-nav li{
+    background-color: orangered;
 }
 
 .navbar-brand {
@@ -40,17 +43,32 @@ body {
     text-shadow: 0 0 5px #000, 0 0 5px #000;
 }
 
+.slide {
+    margin-top: 0;
+}
+.slide img {
+    height:70vh;
+}
+.sucursales{
+    background-image: url(imagen/logistics-3382013_1280.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    
+    
+}
+
 .contenedor {
     display: flex !important;
     text-align: center;
-    background-color: aqua !important;
+    background-color: yellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
     padding: 10px;
-    height: 250px;
-    margin: 0;
-    padding: 0;
+    margin: auto;
     width: 100%;
-    
+    height: auto;
+    min-width: 250px;
+    min-height: 350px;
 }
 
 .contenedor h3 {
@@ -62,9 +80,11 @@ body {
     justify-content: space-between;
 }
 
+
 .txt {
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 20px;
+    background-position: center;
 }
 
 .txt a {
@@ -82,15 +102,10 @@ body {
 }
 
 
-.imagen {
 
-    width: 250px;
-    height: 250px;
-    border-radius: 5px;
-}
 
-.contratacion h1 {
-    text-shadow: 0 0 2px #000, 0 0 2px #000;
+.contratacion {
+    text-shadow: 0 0 2px #000;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -102,7 +117,7 @@ body {
 }
 
 .contratacion li {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
     font-weight: bold;
     margin-bottom: 30px;
@@ -110,7 +125,7 @@ body {
 
 h2 {
     text-align: center;
-    background-color: #000000b9;
+    background-color: orange;
     color: #ffffffd4;
     padding: 15px;
     text-shadow: 0 0 5px #000, 0 0 5px #000;
@@ -121,8 +136,7 @@ h2 {
 .servicios {
     width: 100%;
     min-height: 350px;
-
-    background-color: aqua;
+    background-color: orange;
 
 }
 
@@ -133,7 +147,7 @@ h2 {
     position: relative;
     left: 50px;
     text-align: center;
-    background-color: rgba(0, 255, 255, 0.657);
+    background-color: orange !important;
     border-radius: 7px;
     transition: all 1.1s;
 
@@ -179,7 +193,7 @@ h2 {
     position: relative;
     left: 50px;
     text-align: center;
-    background-color: rgba(0, 255, 255, 0.657);
+    background-color: orange;
     border-radius: 7px;
     transition: all 1.1s;
 }
@@ -224,7 +238,7 @@ h2 {
     position: relative;
     left: 50px;
     text-align: center;
-    background-color: rgba(0, 255, 255, 0.657);
+    background-color: orange;
     border-radius: 7px;
     transition: all 1.1s;
 
@@ -236,6 +250,9 @@ h2 {
     transform: scale(1.09);
     transition: all 1.1s;
 
+}
+.info3 a:hover {
+    background-color: blue;
 }
 
 .info3 h3 {
@@ -366,7 +383,7 @@ h1 {
     color: rgba(0, 0, 0, 0.798);
     text-align: left;
     text-transform: uppercase;
-
+    padding: 5px;
 
 }
 
@@ -393,6 +410,7 @@ footer {
     color: #fff;
     width: 100%;
     height: 100%;
+    padding: 20px;
 
 
 }
@@ -403,8 +421,8 @@ footer p{
 
 .redes a {
     color: aqua;
-    letter-spacing: 20px;
-    font-size: 50px;
+    letter-spacing: 10px;
+    font-size: 30px;
 
 }
 
@@ -415,15 +433,21 @@ footer p{
 }
 
 @media only screen and (max-width:590px) {
-    .txt {
+    .txt{
         overflow: scroll;
     }
+    .contenedor{
+        width: 100%;
+    }
+    
 }
 
-@media only screen and (min-width:360px) {
+@media only screen and (min-width:391px) {
     .nav {
         display: flex;
-
+}
+    .servicios{
+        width: 100%;
     }
 
     body {
@@ -454,14 +478,14 @@ form input::placeholder {
 form input {
     width: 100%;
     font-size: 25px;
-    background-color: rgba(127, 255, 212, 0.564);
+    background-color: orange;
     font-weight: bold;
 
 }
 
 form textarea {
     width: 100%;
-    background-color: rgba(127, 255, 212, 0.597);
+    background-color: orange;
 }
 
 form textarea::placeholder {
@@ -482,11 +506,14 @@ h1 {
 h3 {
     text-shadow: 0 0 3px blue, 0 0 3px blue;
     font-weight: bold;
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 ul li {
-    background-color: rgba(127, 255, 212, 0.554);
+    background-color: orange;
     font-weight: bold;
+    padding: 5px;
+    
 
 }
