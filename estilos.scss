@@ -8,7 +8,6 @@ $color4: #fff;
 $color5: #000;
 $color6: yellow;
 $color7: blue;
-$color8: #333333a4;
 $color8: #7a6b6b;
 // fonts
 
@@ -113,7 +112,64 @@ body {
         background-color: $color7;
     }
 }
+.contenedor2{
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    margin-top: 150px;
+    width: 100%;
+    height: 50vh;
+    background-color: $color4;
+    
+}
 
+.cubo {
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    animation: loop 10s linear infinite;
+    
+img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    width: inherit;
+}
+
+img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+img:nth-child(2) {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+img:nth-child(3) {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+img:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+img:nth-child(5) {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+img:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+}
+@keyframes loop {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
 .contratacion {
     text-shadow: 0 0 2px $color5;
     font-weight: bold;
@@ -380,7 +436,7 @@ footer {
     .nav {
         display: flex;
     }
-
+    
     .servicios {
         width: 100%;
     }
@@ -395,6 +451,9 @@ footer {
     .galeria {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 100px 100px;
+    }
+    .contenedor2{
+        
     }
 }
 
