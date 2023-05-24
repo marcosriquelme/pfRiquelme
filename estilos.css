@@ -60,15 +60,15 @@ body {
 }
 
 .contenedor {
+  width: 100%;
+  height: 60%;
+  padding: 10px;
   display: flex !important;
   text-align: center;
   background-image: linear-gradient(to top left, orangered, orange, yellow);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: auto;
-  width: 100%;
-  height: 60%;
   min-width: 250px;
   min-height: 350px;
 }
@@ -147,14 +147,14 @@ body {
   }
 }
 .contratacion {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
   text-shadow: 0 0 2px #000;
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 15px;
-  display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
 }
 .contratacion .card {
   width: 100%;
@@ -190,7 +190,7 @@ h2 {
   background-color: orange;
 }
 
-.info {
+.info, .info3, .info2 {
   width: 80%;
   min-height: 150px;
   padding: 20px;
@@ -201,121 +201,43 @@ h2 {
   border-radius: 7px;
   transition: all 1.1s;
 }
-.info h3 {
+.info h3, .info3 h3, .info2 h3 {
   color: #fff;
   text-shadow: 0 0 5px #000;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 25px;
   margin-bottom: 20px;
 }
-.info p {
+.info p, .info3 p, .info2 p {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.info a {
+.info a, .info3 a, .info2 a {
   background-color: #7a6b6b;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
 }
-.info a:hover {
+.info a:hover, .info3 a:hover, .info2 a:hover {
   background-color: blue;
 }
 
-.info:hover {
-  box-shadow: 0 0 5px 5px #fff;
-  transform: scale(1.09);
-  transition: all 1.1s;
-}
-
-.info2 {
-  width: 80%;
-  min-height: 150px;
-  padding: 20px;
-  position: relative;
-  left: 50px;
-  text-align: center;
-  background-color: orange;
-  border-radius: 7px;
-  transition: all 1.1s;
-}
-.info2 h3 {
-  color: #fff;
-  text-shadow: 0 0 5px #000;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-.info2 p {
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.info2 a {
-  background-color: #7a6b6b;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.info2 a:hover {
-  background-color: blue;
-}
-
-.info2:hover {
-  box-shadow: 0 0 5px 5px #fff;
-  transform: scale(1.09);
-  transition: all 1.1s;
-}
-
-.info3 {
-  width: 80%;
-  min-height: 150px;
-  padding: 20px;
-  position: relative;
-  left: 50px;
-  text-align: center;
-  background-color: orange;
-  border-radius: 7px;
-  transition: all 1.1s;
-}
-.info3 a:hover {
-  background-color: blue;
-}
-.info3 h3 {
-  color: #fff;
-  text-shadow: 0 0 5px #000;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-.info3 p {
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.info3 a {
-  background-color: #7a6b6b;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.info3:hover {
+.info:hover, .info3:hover, .info2:hover {
   box-shadow: 0 0 5px 5px #fff;
   transform: scale(1.09);
   transition: all 1.1s;
 }
 
 .galeria {
-  background-image: linear-gradient(to top left, orangered, orange, yellow);
-  height: auto;
   width: 100%;
+  height: auto;
+  padding: 20px;
   display: grid;
+  background-image: linear-gradient(to top left, orangered, orange, yellow);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 200px);
   grid-template-areas: "img1 img2 img3 img3" "img1 img4 img5 img6" "img7 img4 img8 img8";
-  padding: 20px;
   grid-gap: 10px;
 }
 .galeria .item {
@@ -455,9 +377,4 @@ form textarea::placeholder {
 form form #enviar {
   background-color: rgba(0, 255, 255, 0.531);
   font-size: 25px;
-}
-
-ul li {
-  font-weight: bold;
-  padding: 5px;
 }/*# sourceMappingURL=estilos.css.map */

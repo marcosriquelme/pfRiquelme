@@ -17,6 +17,13 @@ $font3: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 $font4: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font4: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+@mixin sizes ($width, $height, $padding, $display) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+    display: $display;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +48,6 @@ body {
 }
 
 .navbar {
-    // background-color: $color2;
     background-image: linear-gradient(to top left, $color2 , $color1, $color6 );
 
     .navbar-brand {
@@ -59,8 +65,9 @@ body {
         text-shadow: 0 0 5px $color5, 0 0 5px $color5;
     }
 }
+
 .jumbotron{
-    
+
     h1{
         color: $color6;
         font-weight: bold;
@@ -78,26 +85,23 @@ body {
 .card{
     padding: 15px;
     background-image: linear-gradient(to top left, $color2 , $color1, $color6 );
-    
+
     p{
         font-family: $font1;
         font-weight: bold;
         margin-bottom: 30px;
     }
-    
-    
+
+
 }
 
 .contenedor {
-    display: flex !important;
+    @include sizes(100% , 60% , 10px , flex!important);
     text-align: center;
     background-image: linear-gradient(to top left, $color2 , $color1, $color6 );
-    font-family: $font1;
     font-weight: bold;
-    padding: 10px;
+    font-family: $font1;
     margin: auto;
-    width: 100%;
-    height: 60%;
     min-width: 250px;
     min-height: 350px;
 
@@ -190,14 +194,11 @@ body {
 }
 
 .contratacion {
+    @include sizes(100% , 100% , 15px , flex);
     text-shadow: 0 0 2px $color5;
     font-weight: bold;
     font-family: $font1;
-    padding: 15px;
-    display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
 
     .card {
         width: 100%;
@@ -225,7 +226,6 @@ body {
 
 h2 {
     text-align: center;
-
     color: $color4;
     padding: 15px;
     text-shadow: 0 0 5px $color5, 0 0 5px $color5;
@@ -283,103 +283,21 @@ h2 {
 }
 
 .info2 {
-    width: 80%;
-    min-height: 150px;
-    padding: 20px;
-    position: relative;
-    left: 50px;
-    text-align: center;
-    background-color: $color1;
-    border-radius: 7px;
-    transition: all 1.1s;
-
-    h3 {
-        color: $color4;
-        text-shadow: 0 0 5px $color5;
-        font-family: $font2;
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    a {
-        background-color: $color8;
-        color: $color4;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    a:hover {
-        background-color: $color7;
-    }
+    @extend .info;
 }
-
-.info2:hover {
-    box-shadow: 0 0 5px 5px $color4;
-    transform: scale(1.09);
-    transition: all 1.1s;
-}
-
 .info3 {
-    width: 80%;
-    min-height: 150px;
-    padding: 20px;
-    position: relative;
-    left: 50px;
-    text-align: center;
-    background-color: $color1;
-    border-radius: 7px;
-    transition: all 1.1s;
-
-    a:hover {
-        background-color: $color7;
-    }
-
-    h3 {
-        color: $color4;
-        text-shadow: 0 0 5px $color5;
-        font-family: $font2;
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    a {
-        background-color: $color8;
-        color: $color4;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-}
-
-.info3:hover {
-    box-shadow: 0 0 5px 5px $color4;
-    transform: scale(1.09);
-    transition: all 1.1s;
+    @extend .info;
 }
 
 .galeria {
+    @include sizes(100% , auto , 20px , grid );
     background-image: linear-gradient(to top left, $color2 , $color1, $color6 );
-    height: auto;
-    width: 100%;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 200px);
     grid-template-areas:
         "img1 img2 img3 img3"
         "img1 img4 img5 img6"
         "img7 img4 img8 img8";
-    padding: 20px;
     grid-gap: 10px;
 
     .item {
@@ -540,10 +458,4 @@ form {
         background-color: rgba(0, 255, 255, 0.531);
         font-size: 25px;
     }
-}
-
-ul li {
-    // background-color: $color2;
-    font-weight: bold;
-    padding: 5px;
 }
