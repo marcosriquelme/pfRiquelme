@@ -36,6 +36,17 @@ body {
   text-shadow: 0 0 5px #000, 0 0 5px #000;
 }
 
+.image-section {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.image-section img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .jumbotron h1 {
   color: yellow;
   font-weight: bold;
@@ -195,7 +206,7 @@ h2 {
   min-height: 150px;
   padding: 20px;
   position: relative;
-  left: 50px;
+  margin: 10px auto;
   text-align: center;
   background-color: orange !important;
   border-radius: 7px;
@@ -224,7 +235,7 @@ h2 {
 }
 
 .info:hover, .info3:hover, .info2:hover {
-  box-shadow: 0 0 5px 5px #fff;
+  box-shadow: 0 0 5px 5px #000;
   transform: scale(1.09);
   transition: all 1.1s;
 }
